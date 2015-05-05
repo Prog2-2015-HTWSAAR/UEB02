@@ -32,5 +32,8 @@ void Artikeldialog::testeSetBestand(){
 void Artikeldialog::testeSetBezeichnung(){
 	// TODO implement this
 }
+void Artikeldialog::testeAlles(){
+	// TODO implement this
+}
 
 
