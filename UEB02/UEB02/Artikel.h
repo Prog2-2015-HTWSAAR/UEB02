@@ -1,10 +1,16 @@
 #ifndef ARTIKEL_H_
 #define ARTIKEL_H_
-#pragma once
+#include <iostream>
+#include <string>
+#include <cstring>
+using namespace std;
+
+
 class Artikel {
-public:
-	Artikel();
-	virtual ~Artikel();
+private:
+	int artikelNr;
+	string bezeichnung;
+	int bestand;
 };
 
 #endif 
