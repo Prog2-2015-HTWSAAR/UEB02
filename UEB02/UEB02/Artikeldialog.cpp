@@ -7,13 +7,23 @@
 
 #include "Artikeldialog.h"
 
-Artikeldialog::Artikeldialog() {
+Artikeldialog::Artikeldialog(){
 	// Nothing to do here
 }
 
-Artikeldialog::~Artikeldialog() {
+Artikeldialog::~Artikeldialog(){
 	// Nothing to do here
 }
+
+void testeDefaultConstructor(){
+	// TODO implement this
+}
+
+
+void testeValueConstructor(){
+	// TODO implement this
+}
+
 void Artikeldialog::testeBucheAbgang(){
 	// TODO implement this
 }
