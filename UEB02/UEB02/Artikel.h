@@ -5,19 +5,28 @@
 #include <cstring>
 using namespace std;
 
-void bucheZugang();
-void bucheAbgang();
-int getArtikelNr();
-string getBezeichnung();
-int getBestand();
-void setBestand();
-
 class Artikel {
+public:
+	void bucheZugang(int menge);
+	void bucheAbgang(int menge);
+	void setBestand(int neuBestand);
+
+	int getArtikelNr(){
+		return artikelNr;
+	}
+	string getBezeichnung(){
+		return bezeichnung;
+	}
+	int getBestand(){
+		return bestand;
+	}
 private:
 	int artikelNr;
 	string bezeichnung;
 	int bestand;
+
 };
+
 
 #endif 
 
