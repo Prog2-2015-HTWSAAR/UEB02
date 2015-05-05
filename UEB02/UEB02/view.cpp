@@ -3,6 +3,5 @@
 
 using namespace std;
 int viewIt(){
-	
-
+	//Was guckst du?
 }
