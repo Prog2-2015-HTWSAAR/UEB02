@@ -4,11 +4,10 @@
 
 using namespace std;
 
-Artikel::Artikel(){
-	//TESTWERTE
-	this->artikelNr = 666;
-	this->bezeichnung = "name";
-	this->bestand = 11;
+Artikel::Artikel(int artikelNr, string bezeichnung){
+	this->artikelNr = artikelNr;
+	this->bezeichnung = bezeichnung;
+	this->bestand = 0;
 }
 
 Artikel::Artikel(int artikelNr,string bezeichnung, int bestand){

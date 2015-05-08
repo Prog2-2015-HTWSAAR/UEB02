@@ -8,7 +8,7 @@ using namespace std;
 class Artikel {
 public:
 	Artikel(int artikelNr, string bezeichnung, int bestand);	
-	Artikel();
+	Artikel(int artikelNr, string bezeichnung);
 	void bucheZugang(int menge);
 	void bucheAbgang(int menge);
 	void setBestand(int neuBestand);
