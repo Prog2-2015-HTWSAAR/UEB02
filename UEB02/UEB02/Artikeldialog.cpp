@@ -23,9 +23,9 @@ void Artikeldialog::testeConstructor2(){
 
 	cout << "Starte Test zum Erstellen eines Artikels ohne Bestand..." << endl;
 	cout << "Bitte geben Sie die Werte ein!" << endl;
-	cout << "Artikelnummer:  " << endl;
+	cout << "Artikelnummer:  ";
 	cin >> artikelNr;
-	cout << "Bezeichnung: " << endl;
+	cout << "Bezeichnung: ";
 	cin >> bezeichnung;
 	Artikel artikel(artikelNr,bezeichnung);
 
@@ -133,5 +133,57 @@ void Artikeldialog::testeAlles(){
 	testeSetBestand(artikel);
 	testeSetBezeichnung(artikel);
 }
+void Artikeldialog::dialog(){
+	int answer;
+	do {
+		cout << "-------------------------------" << endl;
+		cout << "(1) Automatischer Test" << endl;
+		cout << "(2) Manueller Test" << endl;
+		cout << "(0) -EXIT-" << endl << endl;
+		cout << "Waehlen sie eine Option: ";
+		cin >> answer;
+		switch (answer){
+		case 0: cout << "ENDE" << endl; break;
+		case 1:	testeAlles(); break;
+		case 2: manuell();
+		default: cout << "-> FEHLERHAFTE EINGABE <-" << endl;
+		}
+	} while (answer != 0);
+}
+void Artikeldialog::manuell(){
+	int answer;
+	int artikelNr;
+	string bezeichnung;
+	int menge;
+	cout << "Artikel Erstellen" << endl << "Artikel Nr. ";
+	cin >> artikelNr;
+	cout << "Bezeichnung. ";
+	cin >> bezeichnung;
+	cout << "Bestand. ";
+	cin >> menge;
 
+	Artikel artikel(artikelNr, bezeichnung, menge);
+	do {
+		cout << "-------------------------------" << endl;
+		cout << "(3) get - ArtikelNr" << endl;
+		cout << "(4) get - Bezeichnung" << endl;
+		cout << "(5) get - Bestand" << endl;
+		cout << "(6) SET - Bestand" << endl << endl;
+		cout << "(7) BUCHE - Abgang" << endl;
+		cout << "(8) BUCHE - Zugang" << endl << endl;
+		cout << "(0) -BACK-" << endl << endl;
+		cout << "Waehlen sie eine Option: ";
+		cin >> answer;
+		switch (answer){
+		case 0: break;
+		case 3: cout << "Artikel Nr. " << artikel.getArtikelNr() << endl;	break;
+		case 4: cout << "Bezeichnung. " << artikel.getBezeichnung() << endl;	break;
+		case 5: cout << "Bestand. " << artikel.getBestand() << endl; break;
+		case 6: cin >> menge; artikel.setBestand(menge); break;
+		case 7: cin >> menge; artikel.bucheAbgang(menge); break;
+		case 8: cin >> menge; artikel.bucheZugang(menge); break;
+		default: cout << "-> FEHLERHAFTE EINGABE <-" << endl;
+		}
+	} while (answer != 0);
+}
 

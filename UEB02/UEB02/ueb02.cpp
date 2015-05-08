@@ -5,6 +5,6 @@
 
 int main(){
 	Artikeldialog dia;
-	dia.testeAlles();
+	dia.dialog();
 	return 0;
 }

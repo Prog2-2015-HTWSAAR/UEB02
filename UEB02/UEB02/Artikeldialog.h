@@ -7,7 +7,7 @@
 
 #ifndef ARTIKELDIALOG_H_
 #define ARTIKELDIALOG_H_
-
+#include "Artikel.h"
 #include "ueb02.h"
 class Artikeldialog {
 public:
@@ -21,6 +21,8 @@ public:
 	void testeSetBezeichnung(Artikel artikel);
 	void testeSetBestand(Artikel artikel);
 	void testeAlles();
+	void dialog();
+	void manuell();
 };
 
 #endif /* ARTIKELDIALOG_H_ */

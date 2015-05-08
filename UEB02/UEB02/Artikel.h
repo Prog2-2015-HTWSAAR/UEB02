@@ -6,9 +6,12 @@ class Artikel {
 public:
 	Artikel(int artikelNr, string bezeichnung, int bestand);	
 	Artikel(int artikelNr, string bezeichnung);
+	
 	void bucheZugang(int menge);
 	void bucheAbgang(int menge);
+	void setArtikelNr(int artikelNr);
 	void setBestand(int neuBestand);
+	void setBezeichnung(string bezeichnung);
 
 	int getArtikelNr(){
 		return artikelNr;

@@ -21,6 +21,12 @@ void Artikel::bucheAbgang(int menge){
 	bestand -= menge;
 }
 
+void Artikel::setArtikelNr(int neuArtikelNr){
+	artikelNr = neuArtikelNr;
+}
+void Artikel::setBezeichnung(string bezeichnung){
+	bezeichnung = bezeichnung;
+}
 void Artikel::setBestand(int neuBestand){
 	bestand = neuBestand;
 }
