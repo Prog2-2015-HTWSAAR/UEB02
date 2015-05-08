@@ -9,9 +9,8 @@ public:
 	
 	void bucheZugang(int menge);
 	void bucheAbgang(int menge);
-	void setArtikelNr(int artikelNr);
 	void setBestand(int neuBestand);
-	void setBezeichnung(string bezeichnung);
+
 
 	int getArtikelNr(){
 		return artikelNr;

@@ -1,3 +1,14 @@
+/**
+* compile: g++ -c -Wall -pedantic *.cpp
+* compile: g++ -o ueb01 *.o
+* @file Artikel.cpp
+* @Author Andreas Schreiner & Simon Bastian
+*
+* @date 08.05.2015
+*
+* Artikel Funktionen
+*
+*/
 #include "Artikel.h"
 #include "ueb02.h"
 
@@ -19,13 +30,6 @@ void Artikel::bucheZugang(int menge){
 
 void Artikel::bucheAbgang(int menge){
 	bestand -= menge;
-}
-
-void Artikel::setArtikelNr(int neuArtikelNr){
-	artikelNr = neuArtikelNr;
-}
-void Artikel::setBezeichnung(string bezeichnung){
-	bezeichnung = bezeichnung;
 }
 void Artikel::setBestand(int neuBestand){
 	bestand = neuBestand;

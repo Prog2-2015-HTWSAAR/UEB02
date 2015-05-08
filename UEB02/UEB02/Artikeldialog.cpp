@@ -1,10 +1,15 @@
-/*
- * Artikeldialog.cpp
- *
- *  Created on: 05.05.2015
- *      Author: sbastian
- */
+/**
+* compile: g++ -c -Wall -pedantic *.cpp
+* compile: g++ -o ueb01 *.o
+* @file Artikeldialog.cpp
+* @Author Andreas Schreiner & Simon Bastian
+*
+* @date 08.05.2015
+*
+* Artikeldialog Funktionen
+*
 
+*/
 #include "Artikeldialog.h"
 #include "ueb02.h"
 #include "Artikel.h"
@@ -138,52 +143,91 @@ void Artikeldialog::dialog(){
 	do {
 		cout << "-------------------------------" << endl;
 		cout << "(1) Automatischer Test" << endl;
-		cout << "(2) Manueller Test" << endl;
+		cout << "(2) Manueller Test 3 param" << endl;
+		cout << "(3) Manueller Test 2 param" << endl;
 		cout << "(0) -EXIT-" << endl << endl;
 		cout << "Waehlen sie eine Option: ";
 		cin >> answer;
 		switch (answer){
-		case 0: cout << "ENDE" << endl; break;
-		case 1:	testeAlles(); break;
-		case 2: manuell();
-		default: cout << "-> FEHLERHAFTE EINGABE <-" << endl;
+		case 0: 
+			cout << "ENDE" << endl; 
+			break;
+		case 1:	
+			testeAlles(); 
+			break;
+		case 2: 
+			createArtikelComplete();
+			break;
+		case 3:
+			createArtikelTwoParam();
+			break;
+		default: 
+			cout << "-> FEHLERHAFTE EINGABE <-" << endl;
 		}
 	} while (answer != 0);
 }
-void Artikeldialog::manuell(){
+
+void Artikeldialog::createArtikelComplete(){
 	int answer;
 	int artikelNr;
 	string bezeichnung;
-	int menge;
+	int menge = 0;
 	cout << "Artikel Erstellen" << endl << "Artikel Nr. ";
 	cin >> artikelNr;
 	cout << "Bezeichnung. ";
 	cin >> bezeichnung;
 	cout << "Bestand. ";
 	cin >> menge;
-
 	Artikel artikel(artikelNr, bezeichnung, menge);
+	manuell(artikel);
+}
+void Artikeldialog::createArtikelTwoParam(){
+	int artikelNr;
+	string bezeichnung;
+	int menge = 0;
+	cout << "Artikel Erstellen" << endl << "Artikel Nr. ";
+	cin >> artikelNr;
+	cout << "Bezeichnung. ";
+	cin >> bezeichnung;
+	Artikel artikel(artikelNr, bezeichnung);
+	manuell(artikel);
+}
+void Artikeldialog::manuell(Artikel artikel){
+	int answer;
+	int menge;
 	do {
 		cout << "-------------------------------" << endl;
-		cout << "(3) get - ArtikelNr" << endl;
-		cout << "(4) get - Bezeichnung" << endl;
-		cout << "(5) get - Bestand" << endl;
+		cout << "Artikel Nr. " << artikel.getArtikelNr() << endl;
+		cout << "Bezeichnung. " << artikel.getBezeichnung() << endl;
+		cout << "Bestand. " << artikel.getBestand() << endl;
+		cout << "-------------------------------" << endl;
 		cout << "(6) SET - Bestand" << endl << endl;
 		cout << "(7) BUCHE - Abgang" << endl;
 		cout << "(8) BUCHE - Zugang" << endl << endl;
-		cout << "(0) -BACK-" << endl << endl;
+		cout << "(0) -BACK and delete Data-" << endl << endl;
 		cout << "Waehlen sie eine Option: ";
 		cin >> answer;
 		switch (answer){
-		case 0: break;
-		case 3: cout << "Artikel Nr. " << artikel.getArtikelNr() << endl;	break;
-		case 4: cout << "Bezeichnung. " << artikel.getBezeichnung() << endl;	break;
-		case 5: cout << "Bestand. " << artikel.getBestand() << endl; break;
-		case 6: cin >> menge; artikel.setBestand(menge); break;
-		case 7: cin >> menge; artikel.bucheAbgang(menge); break;
-		case 8: cin >> menge; artikel.bucheZugang(menge); break;
+		case 0: 
+			break;
+		case 6: 
+			cout << "Wert: ";
+			cin >> menge; 
+			artikel.setBestand(menge); 
+			break;
+		case 7: 
+			cout << "Wert: ";
+			cin >> menge; 
+			artikel.bucheAbgang(menge); 
+			break;
+		case 8: 
+			cout << "Wert: ";
+			cin >> menge; 
+			artikel.bucheZugang(menge); 
+			break;
 		default: cout << "-> FEHLERHAFTE EINGABE <-" << endl;
 		}
 	} while (answer != 0);
 }
+
 
