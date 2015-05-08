@@ -1,8 +1,5 @@
 #include "Artikel.h"
-#include <string>
-#include <cstring>
-
-using namespace std;
+#include "ueb02.h"
 
 Artikel::Artikel(int artikelNr, string bezeichnung){
 	this->artikelNr = artikelNr;
@@ -26,5 +23,11 @@ void Artikel::bucheAbgang(int menge){
 
 void Artikel::setBestand(int neuBestand){
 	bestand = neuBestand;
+}
+
+void Artikel::ausgeben(){
+	cout << "Artikelnummer: " << artikelNr
+		<<	"\nBezeichnung: " << bezeichnung
+			<< "\naktl. Bestand: " << bestand << endl;
 }
 

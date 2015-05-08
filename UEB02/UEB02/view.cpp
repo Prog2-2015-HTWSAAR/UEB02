@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Artikeldialog.h"
+#include "ueb02.h"
+#include "view.h"
 
-using namespace std;
-int viewIt(){
+void viewIt(){
 	//Was guckst du?
 }

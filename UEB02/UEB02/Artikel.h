@@ -1,9 +1,6 @@
 #ifndef ARTIKEL_H_
 #define ARTIKEL_H_
-#include <iostream>
-#include <string>
-#include <cstring>
-using namespace std;
+#include "ueb02.h"
 
 class Artikel {
 public:
@@ -22,6 +19,7 @@ public:
 	int getBestand(){
 		return bestand;
 	}
+	void ausgeben();
 private:
 	int artikelNr;
 	string bezeichnung;

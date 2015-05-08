@@ -8,12 +8,13 @@
 #ifndef ARTIKELDIALOG_H_
 #define ARTIKELDIALOG_H_
 
+#include "ueb02.h"
 class Artikeldialog {
 public:
 	Artikeldialog();
 	virtual ~Artikeldialog();
-	void testeDefaultConstructor();
-	void testeValueConstructor();
+	void testeConstructor2();
+	void testeConstructor3();
 	void testeBucheZugang();
 	void testeBucheAbgang();
 	void testeSetArtikelNr();

@@ -1,7 +1,10 @@
 #include <iostream>
+
+#include "ueb02.h"
 #include "Artikeldialog.h"
 
-using namespace std;
 int main(){
-
+	Artikeldialog dia;
+	dia.testeAlles();
+	return 0;
 }
