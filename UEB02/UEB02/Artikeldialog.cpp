@@ -63,33 +63,75 @@ void Artikeldialog::testeConstructor3(){
 	artikel.ausgeben();
 }
 
-void Artikeldialog::testeBucheAbgang(){
+void Artikeldialog::testeBucheAbgang(Artikel artikel){
+	int menge = 0;
+
 	cout << "Starte Test zur Buchung eines Abgangs..." << endl;
+
+	cout << "Wie viele Artikel umfasst der Abgang?" << endl;
+	cin >> menge;
+
+	cout << "Artikel vor Abgang:" << endl;
+	artikel.ausgeben();
+
+	artikel.bucheAbgang(menge);
+
+	cout << "Artikel nach Abgang:" << endl;
+	artikel.ausgeben();
 }
 
-void Artikeldialog::testeBucheZugang(){
+void Artikeldialog::testeBucheZugang(Artikel artikel){
+	int menge=0;
+
 	cout << "Starte Test zur Buchung eines Zugangs..." << endl;
+
+	cout << "Wie viele Artikel umfasst der Zugang?" << endl;
+	cin >> menge;
+
+	cout << "Artikel vor Zubgang:" << endl;
+	artikel.ausgeben();
+
+	artikel.bucheAbgang(menge);
+
+	cout << "Artikel nach Zugang:" << endl;
+	artikel.ausgeben();
 }
 
-void Artikeldialog::testeSetArtikelNr(){
-	cout << "Starte Test zum Setzen einer ArtikelNummer..." << endl;
+void Artikeldialog::testeSetArtikelNr(Artikel artikel){
+//	not implemented
+//	cout << "Starte Test zum Setzen einer ArtikelNummer..." << endl;
+
 }
 
-void Artikeldialog::testeSetBestand(){
+void Artikeldialog::testeSetBestand(Artikel artikel){
+	int bestand = 0;
 	cout << "Starte Test zum Setzen des Bestands eines Artikels..." << endl;
+
+	cout << "Wie ist der neue Bestand?" << endl;
+	cin >> bestand;
+
+	cout << "Artikel vorher:" << endl;
+	artikel.ausgeben();
+
+	artikel.setBestand(bestand);
+
+	cout << "Artikel nachher:" << endl;
+	artikel.ausgeben();
 }
-void Artikeldialog::testeSetBezeichnung(){
+void Artikeldialog::testeSetBezeichnung(Artikel artikel){
 	cout << "Starte Test zum Setzen der Bezeichnung eines Artikels..." << endl;
 }
 void Artikeldialog::testeAlles(){
+	Artikel artikel(4711,"Koelch-Wasser",42);
+
 	cout << "Starte alle Tests..." << endl;
 	testeConstructor2();
 	testeConstructor3();
-	testeBucheAbgang();
-	testeBucheZugang();
-	testeSetArtikelNr();
-	testeSetBestand();
-	testeSetBezeichnung();
+	testeBucheAbgang(artikel);
+	testeBucheZugang(artikel);
+	testeSetArtikelNr(artikel);
+	testeSetBestand(artikel);
+	testeSetBezeichnung(artikel);
 }
 
 

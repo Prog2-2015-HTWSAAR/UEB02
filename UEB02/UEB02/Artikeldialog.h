@@ -15,11 +15,11 @@ public:
 	virtual ~Artikeldialog();
 	void testeConstructor2();
 	void testeConstructor3();
-	void testeBucheZugang();
-	void testeBucheAbgang();
-	void testeSetArtikelNr();
-	void testeSetBezeichnung();
-	void testeSetBestand();
+	void testeBucheZugang(Artikel artikel);
+	void testeBucheAbgang(Artikel artikel);
+	void testeSetArtikelNr(Artikel artikel);
+	void testeSetBezeichnung(Artikel artikel);
+	void testeSetBestand(Artikel artikel);
 	void testeAlles();
 };
 
