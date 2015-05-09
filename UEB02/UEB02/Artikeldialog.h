@@ -23,8 +23,8 @@ public:
 	void testeAlles();
 	void dialog();
 	void manuell(Artikel countParam);
-	void Artikeldialog::createArtikelComplete();
-	void Artikeldialog::createArtikelTwoParam();
+	void createArtikelComplete();
+	void createArtikelTwoParam();
 };
 
 #endif /* ARTIKELDIALOG_H_ */
