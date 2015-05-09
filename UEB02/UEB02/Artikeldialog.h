@@ -1,3 +1,4 @@
+//// NOPE IN BEARBEITUNG
 /*
  * Artikeldialog.h
  *
