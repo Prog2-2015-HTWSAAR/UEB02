@@ -14,8 +14,8 @@ class Artikeldialog {
 public:
 	Artikeldialog();
 	virtual ~Artikeldialog();
-	void testeConstructor2();
-	void testeConstructor3();
+	void testeConstructor2(int artikelNr, string bezeichnung);
+	void testeConstructor3(int artikelNr, string bezeichnung, int bestand);
 	void testeBucheZugang(Artikel artikel);
 	void testeBucheAbgang(Artikel artikel);
 	void testeSetArtikelNr(Artikel artikel);
