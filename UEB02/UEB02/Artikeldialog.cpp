@@ -169,7 +169,6 @@ void Artikeldialog::dialog(){
 }
 
 void Artikeldialog::createArtikelComplete(){
-	int answer;
 	int artikelNr;
 	string bezeichnung;
 	int menge = 0;
@@ -182,10 +181,10 @@ void Artikeldialog::createArtikelComplete(){
 	Artikel artikel(artikelNr, bezeichnung, menge);
 	manuell(artikel);
 }
+
 void Artikeldialog::createArtikelTwoParam(){
 	int artikelNr;
 	string bezeichnung;
-	int menge = 0;
 	cout << "Artikel Erstellen" << endl << "Artikel Nr. ";
 	cin >> artikelNr;
 	cout << "Bezeichnung. ";
@@ -193,6 +192,7 @@ void Artikeldialog::createArtikelTwoParam(){
 	Artikel artikel(artikelNr, bezeichnung);
 	manuell(artikel);
 }
+
 void Artikeldialog::manuell(Artikel artikel){
 	int answer;
 	int menge;
