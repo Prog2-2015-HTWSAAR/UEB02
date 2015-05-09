@@ -130,6 +130,7 @@ void Artikeldialog::testeAlles(){
 	testeSetBestand(artikel);
 	testeSetBezeichnung(artikel);
 }
+
 void Artikeldialog::dialog(){
 	int answer;
 	do {
