@@ -174,7 +174,7 @@ void Artikeldialog::createArtikelComplete(){
 	cin.clear();
 	cin.ignore(10000, '\n');
 	Artikel artikel(artikelNr, bezeichnung, menge);
-	if (artikel.getArtikelNr() > 0){
+	if (artikel.getArtikelNr() >= 0){
 		manuell(artikel);
 	}
 }
@@ -189,7 +189,7 @@ void Artikeldialog::createArtikelTwoParam(){
 	cout << "Bezeichnung. ";
 	cin >> bezeichnung;
 	Artikel artikel(artikelNr, bezeichnung);
-	if (artikel.getArtikelNr() > 0){
+	if (artikel.getArtikelNr() >= 0){
 		manuell(artikel);
 	}
 }

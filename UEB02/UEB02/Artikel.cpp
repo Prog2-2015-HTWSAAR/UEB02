@@ -9,13 +9,14 @@
 * Artikel Funktionen
 *
 */
+#include <stdexcept>
 #include "Artikel.h"
 #include "ueb02.h"
 
 Artikel::Artikel(int artikelNr, string bezeichnung){
 	try{
 		if (artikelNr / 1 <= 0) {
-			throw exception("error_nan_or_negative");
+			throw runtime_error("error_nan_or_negative");
 		}
 		else{
 
@@ -31,11 +32,11 @@ Artikel::Artikel(int artikelNr, string bezeichnung){
 
 Artikel::Artikel(int artikelNr, string bezeichnung, int bestand){
 	try {
-		if (artikelNr / 1 <= 0) {
-			throw exception("error_nan_or_negative");
+		if (artikelNr / 1 <= 0 ) {
+			throw runtime_error("error_nan_or_negative");
 		}
 		else if (bestand / 1 <= 0) {
-			throw exception("error_nan_or_negative");
+			throw runtime_error("error_nan_or_negative");
 		}
 		else{
 			this->artikelNr = artikelNr;
@@ -54,7 +55,7 @@ Artikel::Artikel(int artikelNr, string bezeichnung, int bestand){
 void Artikel::bucheZugang(int menge){
 	try {
 		if (menge / 1 <= 0) {
-			throw exception ("error_nan_or_negative");
+			throw runtime_error("error_nan_or_negative");
 		}
 		else{
 			bestand += menge;
@@ -69,7 +70,7 @@ void Artikel::bucheZugang(int menge){
 void Artikel::bucheAbgang(int menge){
 	try {
 		if (menge / 1 <= 0) {
-			throw exception("error_nan_or_negative");
+			throw runtime_error("error_nan_or_negative");
 		}
 		else{
 			bestand -= menge;
@@ -83,7 +84,7 @@ void Artikel::bucheAbgang(int menge){
 void Artikel::setBestand(int neuBestand){
 	try {
 		if (neuBestand / 1 <= 0) {
-			throw (char*)"error_nan_or_negative";
+			throw runtime_error("error_nan_or_negative");
 		}
 		else{
 			bestand = neuBestand;
