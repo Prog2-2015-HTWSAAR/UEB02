@@ -165,12 +165,18 @@ void Artikeldialog::createArtikelComplete(){
 	int menge = 0;
 	cout << "Artikel Erstellen" << endl << "Artikel Nr. ";
 	cin >> artikelNr;
+	cin.clear();
+	cin.ignore(10000, '\n');
 	cout << "Bezeichnung. ";
 	cin >> bezeichnung;
 	cout << "Bestand. ";
 	cin >> menge;
+	cin.clear();
+	cin.ignore(10000, '\n');
 	Artikel artikel(artikelNr, bezeichnung, menge);
-	manuell(artikel);
+	if (artikel.getArtikelNr() > 0){
+		manuell(artikel);
+	}
 }
 
 void Artikeldialog::createArtikelTwoParam(){
@@ -178,10 +184,14 @@ void Artikeldialog::createArtikelTwoParam(){
 	string bezeichnung;
 	cout << "Artikel Erstellen" << endl << "Artikel Nr. ";
 	cin >> artikelNr;
+	cin.clear();
+	cin.ignore(10000, '\n');
 	cout << "Bezeichnung. ";
 	cin >> bezeichnung;
 	Artikel artikel(artikelNr, bezeichnung);
-	manuell(artikel);
+	if (artikel.getArtikelNr() > 0){
+		manuell(artikel);
+	}
 }
 
 void Artikeldialog::manuell(Artikel artikel){
@@ -226,6 +236,8 @@ void Artikeldialog::manuell(Artikel artikel){
 			break;
 		default: cout << "-> FEHLERHAFTE EINGABE <-" << endl;
 		}
+		cin.clear();
+		cin.ignore(10000, '\n');
 	} while (answer != 0);
 }
 
