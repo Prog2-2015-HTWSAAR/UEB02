@@ -10,7 +10,7 @@ public:
 	void bucheZugang(int menge);
 	void bucheAbgang(int menge);
 	void setBestand(int neuBestand);
-
+	void setBezeichnung(string neuBezeichnung);
 
 	int getArtikelNr(){
 		return artikelNr;

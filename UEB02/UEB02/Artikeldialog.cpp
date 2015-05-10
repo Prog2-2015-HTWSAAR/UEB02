@@ -187,32 +187,39 @@ void Artikeldialog::createArtikelTwoParam(){
 void Artikeldialog::manuell(Artikel artikel){
 	int answer;
 	int menge;
+	string bezeichnung;
 	do {
 		cout << "-------------------------------" << endl;
-		cout << "Artikel Nr. " << artikel.getArtikelNr() << endl;
-		cout << "Bezeichnung. " << artikel.getBezeichnung() << endl;
-		cout << "Bestand. " << artikel.getBestand() << endl;
+		cout << "Artikel Nr: " << artikel.getArtikelNr() << endl;
+		cout << "Bezeichnung: " << artikel.getBezeichnung() << endl;
+		cout << "Bestand: " << artikel.getBestand() << endl;
 		cout << "-------------------------------" << endl;
-		cout << "(6) SET - Bestand" << endl << endl;
-		cout << "(7) BUCHE - Abgang" << endl;
-		cout << "(8) BUCHE - Zugang" << endl << endl;
+		cout << "(1) SET - Bezeichnung" << endl;
+		cout << "(2) SET - Bestand" << endl << endl;
+		cout << "(3) BUCHE - Abgang" << endl;
+		cout << "(4) BUCHE - Zugang" << endl << endl;
 		cout << "(0) -BACK and delete Data-" << endl << endl;
 		cout << "Waehlen sie eine Option: ";
 		cin >> answer;
 		switch (answer){
 		case 0: 
 			break;
-		case 6: 
+		case 1:
+			cout << "Bezeichnung: ";
+			cin >> bezeichnung;
+			artikel.setBezeichnung(bezeichnung);
+			break;
+		case 2: 
 			cout << "Wert: ";
 			cin >> menge; 
 			artikel.setBestand(menge); 
 			break;
-		case 7: 
+		case 2: 
 			cout << "Wert: ";
 			cin >> menge; 
 			artikel.bucheAbgang(menge); 
 			break;
-		case 8: 
+		case 3: 
 			cout << "Wert: ";
 			cin >> menge; 
 			artikel.bucheZugang(menge); 

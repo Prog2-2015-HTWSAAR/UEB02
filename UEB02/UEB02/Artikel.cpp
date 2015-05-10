@@ -35,6 +35,10 @@ void Artikel::setBestand(int neuBestand){
 	bestand = neuBestand;
 }
 
+void Artikel::setBezeichnung(string neuBezeichnung){
+	bezeichnung = neuBezeichnung;
+}
+
 void Artikel::ausgeben(){
 	cout << "Artikelnummer: " << artikelNr
 		<<	"\nBezeichnung: " << bezeichnung
