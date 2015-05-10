@@ -214,12 +214,12 @@ void Artikeldialog::manuell(Artikel artikel){
 			cin >> menge; 
 			artikel.setBestand(menge); 
 			break;
-		case 2: 
+		case 3: 
 			cout << "Wert: ";
 			cin >> menge; 
 			artikel.bucheAbgang(menge); 
 			break;
-		case 3: 
+		case 4: 
 			cout << "Wert: ";
 			cin >> menge; 
 			artikel.bucheZugang(menge); 
