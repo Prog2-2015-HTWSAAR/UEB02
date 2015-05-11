@@ -12,9 +12,10 @@
 */
 #include <iostream>
 
-#include "ueb02.h"
 #include "Artikeldialog.h"
-
+/**
+* @brief Main Function
+*/
 int main(){
 	Artikeldialog dia;
 	dia.dialog();

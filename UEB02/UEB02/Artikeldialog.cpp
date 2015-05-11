@@ -11,7 +11,6 @@
 
 */
 #include "Artikeldialog.h"
-#include "ueb02.h"
 #include "Artikel.h"
 
 #define TESTNR 4711

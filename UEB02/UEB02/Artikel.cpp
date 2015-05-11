@@ -11,7 +11,6 @@
 */
 #include <stdexcept>
 #include "Artikel.h"
-#include "ueb02.h"
 /**
 * @brief Konstruktor mit 2 Parameter(Artikelnummer. Bezeichnung)
 * @details Konstruktor zur Erzeugung eines Artikel Obj mit bestand=0
