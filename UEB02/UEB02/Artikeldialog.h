@@ -40,11 +40,6 @@ public:
 	 * Test des Setzens der Artikelnummer eines Artikels
 	 *
 	 */
-	void testeSetArtikelNr(Artikel artikel);
-	/**
-	 * Test des Setzens der Bezeichnung eines Artikels
-	 * @param artikel
-	 */
 	void testeSetBezeichnung(Artikel artikel);
 	/**
 	 * Test des Setzens des Bestands eines Artikels

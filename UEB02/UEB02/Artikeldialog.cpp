@@ -26,7 +26,11 @@ Artikeldialog::Artikeldialog(){
 Artikeldialog::~Artikeldialog(){
 	// Nothing to do here
 }
-
+/**
+* @brief testeConstructor2 mit 2 Parameter(Artikelnummer. Bezeichnung)
+* @param[in] artikelNr Artikelnummer des neuen Obj
+* @param[in] bezeichnung Bezeichnung des neuen Obj
+*/
 void Artikeldialog::testeConstructor2(int artikelNr, string bezeichnung){
 
 	cout << endl << "Starte Test zum Erstellen eines Artikels ohne Bestand..." << endl;
@@ -39,8 +43,12 @@ void Artikeldialog::testeConstructor2(int artikelNr, string bezeichnung){
 	cout << endl << "Erstellter Artikel:" << endl;
 	artikel.ausgeben();
 }
-
-
+/**
+*@brief testeConstructor3 mit 3 Parameter(Artikelnummer.Bezeichnung, Bestand)
+* @param[in] artikelNr Artikelnummer
+* @param[in] bezeichnung Bezeichnung
+* @param[in] bestand Lagerbestand
+*/
 void Artikeldialog::testeConstructor3(int artikelNr, string bezeichnung, int bestand){
 
 	cout << endl << "Starte Test zum Erstellen eines Artikels mit Bestand..." << endl;
@@ -54,7 +62,11 @@ void Artikeldialog::testeConstructor3(int artikelNr, string bezeichnung, int bes
 	cout << endl << "Erstellter Artikel:" << endl;
 	artikel.ausgeben();
 }
-
+/**
+* @brief testeBucheAbgang
+* @details Autom Test Buche Abgang Bestand
+* @param[in] artikel Artikel obj
+*/
 void Artikeldialog::testeBucheAbgang(Artikel artikel){
 	int menge = TESTABGANG;
 
@@ -71,6 +83,11 @@ void Artikeldialog::testeBucheAbgang(Artikel artikel){
 	artikel.ausgeben();
 }
 
+/**
+* @brief testeBucheZugang
+* @details Autom Test Buche Zugang Bestand
+* @param[in] artikel Artikel obj
+*/
 void Artikeldialog::testeBucheZugang(Artikel artikel){
 	int menge=TESTZUGANG;
 
@@ -87,12 +104,11 @@ void Artikeldialog::testeBucheZugang(Artikel artikel){
 	artikel.ausgeben();
 }
 
-void Artikeldialog::testeSetArtikelNr(Artikel artikel){
-//	not implemented
-//	cout << endl << "Starte Test zum Setzen einer ArtikelNummer..." << endl;
-
-}
-
+/**
+* @brief testeSetBestand
+* @details Autom Test Setze Bestand
+* @param[in] artikel Artikel obj
+*/
 void Artikeldialog::testeSetBestand(Artikel artikel){
 	int bestand = TESTBESTAND;
 	cout << endl << "Starte Test zum Setzen des Bestands eines Artikels..." << endl;
@@ -107,12 +123,33 @@ void Artikeldialog::testeSetBestand(Artikel artikel){
 	cout << endl << "Artikel nachher:" << endl;
 	artikel.ausgeben();
 }
-
+/**
+* @brief testeSetBezeichnung
+* @details Autom Test Setze Bezeichnung
+* @param[in] artikel Artikel obj
+*/
 void Artikeldialog::testeSetBezeichnung(Artikel artikel){
-// not implemented
-//	cout << endl << "Starte Test zum Setzen der Bezeichnung eines Artikels..." << endl;
-}
+	string bezeichnung = TESTBESCHR;
+	cout << endl << "Starte Test zum Setzen der Bezeichnung eines Artikels..." << endl;
 
+	cout << "Die neue Bezeichnung soll " << bezeichnung << " sein!" << endl;
+
+	cout << "Artikel vorher:" << endl;
+	artikel.ausgeben();
+
+	artikel.setBezeichnung(bezeichnung);
+
+	cout << endl << "Artikel nachher:" << endl;
+	artikel.ausgeben();
+}
+/**
+* @brief testeAlles
+* @details Autom Test Fkt
+* @param[out] artikelNr Artikelnummer
+* @param[out] bezeichnung Bezeichnung
+* @param[out] bestand Lagerbestand
+* @param[out] artikel Artikel obj
+*/
 void Artikeldialog::testeAlles(){
 	int artikelNr= TESTNR;
 	string beschreibung = TESTBESCHR;
@@ -124,11 +161,13 @@ void Artikeldialog::testeAlles(){
 	testeConstructor3(artikelNr, beschreibung, bestand);
 	testeBucheAbgang(artikel);
 	testeBucheZugang(artikel);
-	testeSetArtikelNr(artikel);
 	testeSetBestand(artikel);
 	testeSetBezeichnung(artikel);
 }
-
+/**
+* @brief dialog
+* @details Dialog Fkt oberste ebene des Dialogs
+*/
 void Artikeldialog::dialog(){
 	int answer;
 	do {
@@ -158,6 +197,14 @@ void Artikeldialog::dialog(){
 	} while (answer != 0);
 }
 
+/**
+* @brief createArtikelComplete 
+* @details Artikel Erstellung mit 3 parametern
+* @param[out] artikelNr Artikelnummer
+* @param[out] bezeichnung Bezeichnung
+* @param[out] bestand Lagerbestand
+* @param[out] artikel Artikel obj
+*/
 void Artikeldialog::createArtikelComplete(){
 	int artikelNr;
 	string bezeichnung;
@@ -177,7 +224,14 @@ void Artikeldialog::createArtikelComplete(){
 		manuell(artikel);
 	}
 }
-
+/**
+* @brief createArtikelTwoParam
+* @details Artikel Erstellung mit 2 parametern wobei bestand=0
+* @param[out] artikelNr Artikelnummer
+* @param[out] bezeichnung Bezeichnung
+* @param[out] bestand Lagerbestand
+* @param[out] artikel Artikel obj
+*/
 void Artikeldialog::createArtikelTwoParam(){
 	int artikelNr;
 	string bezeichnung;
@@ -192,7 +246,13 @@ void Artikeldialog::createArtikelTwoParam(){
 		manuell(artikel);
 	}
 }
-
+/**
+* @brief manuell
+* @details manuell Fkt untere ebene des Dialogs
+* @param[in] artikel Artikel obj
+* @param[out] bezeichnung Bezeichnung
+* @param[out] menge Lagerbestand
+*/
 void Artikeldialog::manuell(Artikel artikel){
 	int answer;
 	int menge;
