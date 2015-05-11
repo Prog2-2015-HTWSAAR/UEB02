@@ -14,7 +14,8 @@
 #include "Artikel.h"
 
 #define TESTNR 4711
-#define TESTBESCHR "Koelsch-Wasser"
+#define TESTBESCHR "Wasser"
+#define TESTBESCHRB "Koelsch-Wasser"
 #define TESTBESTAND 42
 #define TESTABGANG 23
 #define TESTZUGANG 21
@@ -129,7 +130,7 @@ void Artikeldialog::testeSetBestand(Artikel artikel){
 * @param[in] artikel Artikel obj
 */
 void Artikeldialog::testeSetBezeichnung(Artikel artikel){
-	string bezeichnung = TESTBESCHR;
+	string bezeichnung = TESTBESCHRB;
 	cout << endl << "Starte Test zum Setzen der Bezeichnung eines Artikels..." << endl;
 
 	cout << "Die neue Bezeichnung soll " << bezeichnung << " sein!" << endl;
