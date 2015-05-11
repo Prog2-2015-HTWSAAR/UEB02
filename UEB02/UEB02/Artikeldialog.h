@@ -12,7 +12,6 @@
 #ifndef ARTIKELDIALOG_H_
 #define ARTIKELDIALOG_H_
 #include "Artikel.h"
-#include "ueb02.h"
 class Artikeldialog {
 public:
 	Artikeldialog();

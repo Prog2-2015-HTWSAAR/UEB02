@@ -7,7 +7,10 @@
 */
 #ifndef ARTIKEL_H_
 #define ARTIKEL_H_
-#include "ueb02.h"
+#include <iostream>
+#include <string>
+#include <cstring>
+using namespace std;
 /**
 * @brief Artikel Klasse
 */
